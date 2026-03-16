@@ -1,4 +1,8 @@
-"""Typed routing data models."""
+from __future__ import annotations
+
+from smart_router._bootstrap import ensure_repo_root_on_path
+
+ensure_repo_root_on_path()
 
 from models.payment_context import PaymentContext
 from models.route_definition import RouteDefinition

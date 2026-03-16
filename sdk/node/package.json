@@ -1,0 +1,11 @@
+{
+  "name": "smart-router",
+  "version": "0.1.0",
+  "description": "Algorithm framework for payment route decisioning.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node ../../tests/node_parity.test.js"
+  },
+  "license": "MIT"
+}

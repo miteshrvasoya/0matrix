@@ -1,15 +1,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime
 
 
 @dataclass(frozen=True)
 class PaymentContext:
-    """Input details used by the routing engine to select a bank route."""
-
-    payment_id: str
     amount: float
-    currency: str
-    country: str
-    merchant_id: str
-    preferred_bank: str | None = None
+    payment_method: str
+    payer_bank: str | None
+    region: str
+    timestamp: datetime | str

@@ -1,0 +1,51 @@
+{
+  "context": {
+    "amount": 120.5,
+    "payment_method": "card",
+    "payer_bank": "BankA",
+    "region": "US",
+    "timestamp": "2026-03-07T00:00:00Z"
+  },
+  "routes": [
+    {
+      "name": "route_a",
+      "cost": 0.32,
+      "capacity": 1000
+    },
+    {
+      "name": "route_b",
+      "cost": 0.16,
+      "capacity": 1000
+    },
+    {
+      "name": "route_c",
+      "cost": 0.27,
+      "capacity": 1000
+    }
+  ],
+  "metrics": {
+    "route_a": {
+      "success_rate": 0.96,
+      "error_rate": 0.04,
+      "avg_latency": 180,
+      "sample_size": 2000
+    },
+    "route_b": {
+      "success_rate": 0.94,
+      "error_rate": 0.06,
+      "avg_latency": 80,
+      "sample_size": 1800
+    },
+    "route_c": {
+      "success_rate": 0.91,
+      "error_rate": 0.09,
+      "avg_latency": 240,
+      "sample_size": 1300
+    }
+  },
+  "expected": {
+    "weighted": "route_b",
+    "epsilon_bandit": "route_a",
+    "thompson": "route_a"
+  }
+}
